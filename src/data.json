@@ -1,0 +1,118 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "image": "/images/camisa01.jpg",
+            "title": "Lorem ipsum dolor sit amet",
+            "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+            "availableSizes": [
+                "PP",
+                "P",
+                "M",
+                "G",
+                "GG",
+                "XGG",
+                "G1",
+                "G2",
+                "G3",
+                "G4"
+            ],
+            "price": 57.8
+        },
+        {
+            "id": 2,
+            "image": "/images/camisa02.jpg",
+            "title": "Lorem ipsum dolor sit amet",
+            "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+            "availableSizes": [
+                "PP",
+                "P",
+                "M",
+                "G",
+                "GG",
+                "XGG",
+                "G1",
+                "G2",
+                "G3",
+                "G4"
+            ],
+            "price": 57.8
+        },
+        {
+            "id": 3,
+            "image": "/images/camisa03.jpg",
+            "title": "Lorem ipsum dolor sit amet",
+            "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+            "availableSizes": [
+                "PP",
+                "P",
+                "M",
+                "G",
+                "GG",
+                "XGG",
+                "G1",
+                "G2",
+                "G3",
+                "G4"
+            ],
+            "price": 57.8
+        },
+        {
+            "id": 4,
+            "image": "/images/camisa04.jpg",
+            "title": "Lorem ipsum dolor sit amet",
+            "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+            "availableSizes": [
+                "PP",
+                "P",
+                "M",
+                "G",
+                "GG",
+                "XGG",
+                "G1",
+                "G2",
+                "G3",
+                "G4"
+            ],
+            "price": 57.8
+        },
+        {
+            "id": 5,
+            "image": "/images/camisa05.jpg",
+            "title": "Lorem ipsum dolor sit amet",
+            "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+            "availableSizes": [
+                "PP",
+                "P",
+                "M",
+                "G",
+                "GG",
+                "XGG",
+                "G1",
+                "G2",
+                "G3",
+                "G4"
+            ],
+            "price": 57.8
+        },
+        {
+            "id": 6,
+            "image": "/images/camisa06.jpg",
+            "title": "Lorem ipsum dolor sit amet",
+            "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+            "availableSizes": [
+                "PP",
+                "P",
+                "M",
+                "G",
+                "GG",
+                "XGG",
+                "G1",
+                "G2",
+                "G3",
+                "G4"
+            ],
+            "price": 57.8
+        }
+    ]
+}
