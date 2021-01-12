@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react'
 import data from "./data.json";
 import Products from './components/Products';
+import Filter from './components/Filter';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,6 +15,45 @@ class App extends React.Component {
     }
   }
 
+  filterSizeHandeler = (event) => {
+    if (event.target.value === "") {
+      this.setState({
+        size: event.target.value,
+        products: data.products
+      })
+    }
+    else {
+      this.setState({
+        size: event.target.value,
+        products: data.products.filter(
+          (products) => products.availableSizes.indexOf(event.target.value) >= 0
+        )
+      })
+    }
+  }
+
+  sortProductsPriceHandeler = (event) => {
+    const sort = event.target.value;
+    if (sort === "") {
+      this.setState((state) => ({
+        sort: sort,
+        products: data.products
+      }));
+    }
+    else {
+      this.setState((state) => ({
+        sort: sort,
+        products: this.state.products
+          .slice()
+          .sort((a, b) =>
+            sort === "lowest" ? a.price > b.price ? 1 : -1
+              : sort === "highest" ? a.price < b.price ? 1 : -1
+                : a._id < b._id ? 1 : -1
+          ),
+      }));
+    }
+  };
+
   render() {
     return (
       <div className="grid-container">
@@ -23,6 +63,13 @@ class App extends React.Component {
         <main>
           <div className="content">
             <div className="main">
+              <Filter
+                count={this.state.products.length}
+                size={this.state.size}
+                sort={this.state.sort}
+                filterSizeHandeler={this.filterSizeHandeler}
+                sortProductsPriceHandeler={this.sortProductsPriceHandeler}>
+              </Filter>
               <Products products={this.state.products}></Products>
             </div>
             <div className="sidebar">
