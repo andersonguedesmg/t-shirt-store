@@ -3,26 +3,24 @@
         {
             "id": 1,
             "image": "/images/camisa01.jpg",
-            "title": "Lorem ipsum dolor sit amet",
+            "title": "Camisa Nirvana USA 91",
             "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
             "availableSizes": [
                 "PP",
                 "P",
                 "M",
                 "G",
-                "GG",
                 "XGG",
                 "G1",
                 "G2",
-                "G3",
                 "G4"
             ],
-            "price": 57.8
+            "price": 141.29
         },
         {
             "id": 2,
             "image": "/images/camisa02.jpg",
-            "title": "Lorem ipsum dolor sit amet",
+            "title": "Regrets T-Shirt",
             "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
             "availableSizes": [
                 "PP",
@@ -36,83 +34,73 @@
                 "G3",
                 "G4"
             ],
-            "price": 57.8
+            "price": 57.89
         },
         {
             "id": 3,
             "image": "/images/camisa03.jpg",
-            "title": "Lorem ipsum dolor sit amet",
+            "title": "Camisa Amarela Simples",
             "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
             "availableSizes": [
                 "PP",
                 "P",
                 "M",
-                "G",
                 "GG",
-                "XGG",
                 "G1",
                 "G2",
                 "G3",
                 "G4"
             ],
-            "price": 57.8
+            "price": 44.99
         },
         {
             "id": 4,
             "image": "/images/camisa04.jpg",
-            "title": "Lorem ipsum dolor sit amet",
+            "title": "Camiseta branca",
             "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
             "availableSizes": [
-                "PP",
-                "P",
                 "M",
                 "G",
                 "GG",
                 "XGG",
-                "G1",
                 "G2",
                 "G3",
                 "G4"
             ],
-            "price": 57.8
+            "price": 32.85
         },
         {
             "id": 5,
             "image": "/images/camisa05.jpg",
-            "title": "Lorem ipsum dolor sit amet",
+            "title": "Introvert black t-shirt",
             "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
             "availableSizes": [
                 "PP",
                 "P",
-                "M",
                 "G",
                 "GG",
                 "XGG",
-                "G1",
                 "G2",
                 "G3",
                 "G4"
             ],
-            "price": 57.8
+            "price": 75.99
         },
         {
             "id": 6,
             "image": "/images/camisa06.jpg",
-            "title": "Lorem ipsum dolor sit amet",
+            "title": "Camisa PAC-MAN",
             "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
             "availableSizes": [
-                "PP",
                 "P",
                 "M",
                 "G",
                 "GG",
-                "XGG",
                 "G1",
                 "G2",
-                "G3",
                 "G4"
             ],
-            "price": 57.8
+            "price": 95.89
         }
     ]
 }
