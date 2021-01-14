@@ -19,7 +19,7 @@ class Products extends Component {
                   <div>
                     {formatCurrency(product.price)}
                   </div>
-                  <button className="button primary">Adicionar</button>
+                  <button onClick={() => this.props.addToCart(product)} className="button primary">Adicionar</button>
                 </div>
               </div>
             </li>

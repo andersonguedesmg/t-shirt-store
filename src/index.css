@@ -74,7 +74,7 @@ footer {
 }
 
 .sidebar {
-  flex: 1 20rem;
+  flex: 2 20rem;
 }
 
 .products {
@@ -90,7 +90,7 @@ footer {
 .products li {
   flex: 0 1 23rem;
   height: 47rem;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .product {
@@ -101,8 +101,8 @@ footer {
 }
 
 .product img {
-  max-width: 37rem;
-  max-height: 37rem;
+  max-width: 38rem;
+  max-height: 38rem;
 }
 
 .product-price {
@@ -114,6 +114,7 @@ footer {
 .product-price div,
 .product-price button {
   align-items: center;
+  flex: 1;
 }
 
 .product-price div {
@@ -144,5 +145,59 @@ footer {
 }
 
 .filter div {
+  flex: 1;
+}
+
+.cart {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.cart-header {
+  border-bottom: 0.1rem solid #c0c0c0;
+  padding-bottom: 13px;
+}
+
+.cart-items {
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+.cart-items img {
+  width: 5rem;
+}
+
+.cart-items li {
+  display: flex;
+}
+
+.cart-items li div {
+  padding: 0.5rem;
+}
+
+.cart-items li div:last-child {
+  flex: 1;
+}
+
+.right-in-cart {
+  text-align: right;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.total > div {
+  font-size: 2rem;
+}
+
+.total > div,
+.total > button {
   flex: 1;
 }
