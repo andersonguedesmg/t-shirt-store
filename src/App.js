@@ -82,6 +82,10 @@ class App extends React.Component {
     localStorage.setItem("cartItems", JSON.stringify(cartItems.filter(x => x.id !== product.id)))
   }
 
+  createOrder = (order) => {
+    alert("Salvar o pedido de " + order.name)
+  }
+
   render() {
     return (
       <div className="grid-container">
@@ -104,7 +108,7 @@ class App extends React.Component {
               </Products>
             </div>
             <div className="sidebar">
-              <Cart cartItems={this.state.cartItems} removeFromCart={this.removeFromCart} />
+              <Cart cartItems={this.state.cartItems} removeFromCart={this.removeFromCart} createOrder={this.createOrder} />
             </div>
           </div>
         </main>
