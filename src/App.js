@@ -4,6 +4,8 @@ import data from "./data.json";
 import Products from './components/Products';
 import Filter from './components/Filter';
 import Cart from './components/Cart';
+import store from "./store";
+import { Provider } from "react-redux";
 
 class App extends React.Component {
   constructor(props) {
@@ -88,34 +90,36 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="grid-container">
-        <header>
-          <a href="/">T-SHIRT STORE</a>
-        </header>
-        <main>
-          <div className="content">
-            <div className="main">
-              <Filter
-                count={this.state.products.length}
-                size={this.state.size}
-                sort={this.state.sort}
-                filterSizeHandeler={this.filterSizeHandeler}
-                sortProductsPriceHandeler={this.sortProductsPriceHandeler}>
-              </Filter>
-              <Products
-                products={this.state.products}
-                addToCart={this.addToCart}>
-              </Products>
+      <Provider store={store}>
+        <div className="grid-container">
+          <header>
+            <a href="/">T-SHIRT STORE</a>
+          </header>
+          <main>
+            <div className="content">
+              <div className="main">
+                <Filter
+                  count={this.state.products.length}
+                  size={this.state.size}
+                  sort={this.state.sort}
+                  filterSizeHandeler={this.filterSizeHandeler}
+                  sortProductsPriceHandeler={this.sortProductsPriceHandeler}>
+                </Filter>
+                <Products
+                  products={this.state.products}
+                  addToCart={this.addToCart}>
+                </Products>
+              </div>
+              <div className="sidebar">
+                <Cart cartItems={this.state.cartItems} removeFromCart={this.removeFromCart} createOrder={this.createOrder} />
+              </div>
             </div>
-            <div className="sidebar">
-              <Cart cartItems={this.state.cartItems} removeFromCart={this.removeFromCart} createOrder={this.createOrder} />
-            </div>
-          </div>
-        </main>
-        <footer>
-          2021 Anderson Guedes | T-Shirt Store
+          </main>
+          <footer>
+            2021 Anderson Guedes | T-Shirt Store
         </footer>
-      </div>
+        </div>
+      </Provider>
     );
   }
 }

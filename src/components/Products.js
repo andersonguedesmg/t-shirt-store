@@ -3,6 +3,8 @@ import formatCurrency from "../utils";
 import Fade from 'react-reveal/Fade';
 import Modal from 'react-modal';
 import Zoom from 'react-reveal/Zoom';
+import { connect } from "react-redux";
+import { fetchProducts } from "../actions/productActions";
 
 class Products extends Component {
   constructor(props) {
@@ -11,6 +13,10 @@ class Products extends Component {
     this.state = {
       product: null,
     }
+  }
+
+  componentDidMount() {
+    this.props.fetchProducts();
   }
 
   openModal = (product) => {
@@ -24,30 +30,36 @@ class Products extends Component {
   render() {
 
     const { product } = this.state;
-
+    console.log(this.props.products);
     return (
       <div>
         <Fade bottom cascade={true}>
-          <ul className="products">
-            {this.props.products.map(product => (
-              <li key={product.id}>
-                <div className="product">
-                  <a href={"#" + product.id} onClick={() => this.openModal(product)}>
-                    <img src={product.image} alt={product.title}></img>
-                    <p>
-                      {product.title}
-                    </p>
-                  </a>
-                  <div className="product-price">
-                    <div>
-                      {formatCurrency(product.price)}
+          {!this.props.products ? (
+            <div>Loading...</div>
+          ) : (
+              <ul className="products">
+                {this.props.products.map(product => (
+                  <li key={product.id}>
+                    <div className="product">
+                      <a href={"#" + product.id} onClick={() => this.openModal(product)}>
+                        <img src={product.image} alt={product.title}></img>
+                        <p>
+                          {product.title}
+                        </p>
+                      </a>
+                      <div className="product-price">
+                        <div>
+                          {formatCurrency(product.price)}
+                        </div>
+                        <button onClick={() => this.props.addToCart(product)} className="button primary">Adicionar</button>
+                      </div>
                     </div>
-                    <button onClick={() => this.props.addToCart(product)} className="button primary">Adicionar</button>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
+                  </li>
+                ))}
+              </ul>
+            )
+          }
+
         </Fade>
         {
           product &&
@@ -88,4 +100,6 @@ class Products extends Component {
   }
 }
 
-export default Products
+export default connect((state) => ({ products: state.products.items }), {
+  fetchProducts,
+})(Products);
